@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+
+<body>
+    <h1>Player lookup</h1>
+    <div id="cnct">
+        
+        <img id="image" alt="img" style="margin-left: 30%" />
+        <div id="info">
+        <b>Driver Id : </b>
+        <span id="driverId"></span><br>
+        <b>Driver Given Name:</b>
+            <span id="givenName"></span>
+        </div>
+        
+        <div id="data" style="text-align: center">
+            <b>Wikipedia Link of Driver:</b>
+            <span id="wiki"></span><br>
+            <b>Family Name of Driver:</b> 
+            <span id="familyName"></span><br>
+            <b>Date of Birth of Driver:</b>
+            <span id="dateOfBirth"></span><br>
+            <b>Nationality of Driver:</b> 
+            <span id="nationality"></span>
+        </div>
+    </div>
+    <!--cnct div-->
+    <script>
+    var query = window.location.search;
+    // Skip the leading ?, which should always be there,
+    // but be careful anyway
+    if (query.substring(0, 1) == '?') {
+        query = query.substring(1);
+    }
+    var finaldata = query.split(',');
+    for (i = 0; (i < finaldata.length); i++) {
+        finaldata[i] = unescape(finaldata[i]);
+    }
+        document.getElementById('image').src = finaldata[1];
+        document.getElementById('driverId').innerHTML = finaldata[0];
+        document.getElementById('givenName').innerHTML = finaldata[2];
+        document.getElementById('wiki').innerHTML = finaldata[3];
+        document.getElementById('familyName').innerHTML = finaldata[4];
+        document.getElementById('dateOfBirth').innerHTML = finaldata[5];
+        document.getElementById('nationality').innerHTML = finaldata[6];
+</script>
+<!--
+<ul>
+    <script>
+        for (i = 0; (i < finaldata.length); i++) {
+            document.write("<li>" + finaldata[i] + "</li>\n");
+        }
+        
+        
+    </script>
+</ul>-->
+    
+    <!--<script src="script/script.js"></script>-->
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+</body>
+
+</html>

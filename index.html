@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="cnct">
+        <!-- ROW 1 -->
+        <div class="row no-gutter">
+            <div class="col">
+                <img id="leftbtn" src="images/Left.png" class="arrow" />
+            </div>
+            <div class="col">
+                <img id="image" alt="img" />
+            </div>
+            <div class="col">
+                <img id="rightbtn" src="images/Right.png" class="arrow" />
+            </div>
+        </div>
+        <div id="info">
+        <b>Driver Id : </b>
+        <span id="driverId"></span><br>
+        <b>Driver Given Name:</b>
+            <span id="givenName"></span>
+        </div>
+        
+        <div id="data" style="display:none; text-align: center;">
+            <b>Wikipedia Link of Driver:</b>
+            <span id="wiki"></span><br>
+            <b>Family Name of Driver:</b> 
+            <span id="familyName"></span><br>
+            <b>Date of Birth of Driver:</b>
+            <span id="dateOfBirth"></span><br>
+            <b>Nationality of Driver:</b> 
+            <span id="nationality"></span>
+        </div><br>
+        <button class=".btn-default" id="mor" onclick="myFunction()">Show More</button>
+        
+       <!--<a target="_blank" href="Playerlookup.html">
+            <button class=".btn-default" onclick="getInfo()" >Player Lookup</button></a>-->
+        <a onclick="getInfo();"><button >Player LookUp</button></a>
+        <!--data div-->
+    </div>
+    <!--cnct div-->
+    <script src="script/script.js"></script>
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+</body>
+
+</html>
